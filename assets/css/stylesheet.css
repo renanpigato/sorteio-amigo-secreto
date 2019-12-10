@@ -1,0 +1,239 @@
+.margin {
+  margin: 10px;
+}
+  
+.margin-sides {
+  margin: 0 10px;
+}
+
+.margin-sides-left {
+  margin: 0 0 0 10px;
+}
+
+.margin-sides-right {
+  margin: 0 10px 0 0;
+}
+
+.margin-vertical {
+  margin: 10px 0;
+}
+
+.margin-sides-double {
+  margin: 0 20px;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+div.divider {
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+}
+
+html, body {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+}
+.layout .mdl-layout__header .mdl-layout__drawer-button {
+  color: rgba(0, 0, 0, 0.54);
+}
+.drawer {
+  border: none;
+}
+/* iOS Safari specific workaround */
+.drawer .mdl-menu__container {
+  z-index: -1;
+}
+.drawer .navigation {
+  z-index: -2;
+}
+/* END iOS Safari specific workaround */
+.drawer .mdl-menu .mdl-menu__item {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.drawer-header {
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 16px;
+  height: 151px;
+}
+.avatar-dropdown {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.navigation {
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.layout .navigation .mdl-navigation__link {
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgba(255, 255, 255, 0.56);
+  font-weight: 500;
+}
+.layout .navigation .mdl-navigation__link:hover {
+  background-color: #00BCD4;
+  color: #37474F;
+}
+.navigation .mdl-navigation__link .material-icons {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.56);
+  margin-right: 32px;
+}
+
+.mdl-card.mdl-card-wide {
+  width: 100%;
+}
+
+.material-icons.md-18 {
+  font-size: 18px; 
+}
+.material-icons.md-24 {
+  font-size: 24px; 
+}
+.material-icons.md-36 {
+  font-size: 36px; 
+}
+.material-icons.md-48 {
+  font-size: 48px; 
+}
+
+.content {
+  max-width: 1080px;
+}
+
+body .main-overlay-ajax-request {
+	display: none;
+}
+
+body .overlay-ajax-request {
+	position: absolute;
+  top     : 0;
+  left    : 0;
+  width   : 100%;
+  height  : 100%;
+  display : block;
+  background-color: #000;
+  opacity         : 0.5;
+  z-index         : 99999;
+}
+
+body .message-ajax-request {
+	position: relative;
+	margin: 0 auto;
+	width: 400px;
+	background-color: #fff;
+  border-radius: 5px;
+  z-index: 99999;
+}
+
+body .message-ajax-request .logo-message-ajax-request {
+  display: inline-block;
+	background-image: url(../img/carregando_dev.gif);
+  background-size: 70px;
+  width: 70px;
+  height: 70px;
+  margin: 10px;
+}
+
+body .message-ajax-request .msg-message-ajax-request {
+  display: inline-block;
+  height: 70px;
+}
+
+body .message .error,
+body .message .success
+{
+  padding: 5px;
+  font-style: italic;
+  color: #FFF;
+  text-align: center;
+}
+
+body .message .error {
+  color: #FF5656;
+}
+body .message .error:before {
+  content: "Erro: ";
+}
+
+body .message .success {
+  color: #13914b;
+}
+body .message .success:before {
+  content: "Status: ";
+}
+
+body dialog .mdl-dialog__title > *{
+  display: inline-block;
+}
+
+body dialog button.mdl-button.close {
+  position: absolute;
+  right: 22px;
+  top: 38px;
+}
+
+.title-header-table {
+  position: relative;
+  margin: 8px;
+}
+.title-header-table > span {
+  min-height: 36px;
+  margin: 8px;
+}
+.title-header-table > span.table-header-buttons {
+  display: none;
+  position: absolute;
+  top: -8px;
+  margin: 0px;
+}
+.title-header-table > span#trash.table-header-buttons {
+  right: 0;
+}
+.title-header-table > span#print.table-header-buttons {
+  right: 70px;
+}
