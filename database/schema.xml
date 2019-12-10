@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<database name="default" defaultIdMethod="native" defaultPhpNamingMethod="underscore" namespace="AmigoSecreto">
+  <table name="actions" phpName="Actions">
+    <!--
+      Each column also requires a `type`. The XML schema is database agnostic, so the column types and attributes
+      are probably not exactly the same as the one you use in your own database. But Propel knows how to map the
+      schema types with SQL types for many database vendors. Existing Propel column types are:
+      `boolean`, `tinyint`, `smallint`, `integer`, `bigint`, `double`, `float`, `real`, `decimal`, `char`,
+      `varchar`, `longvarchar`, `date`, `time`, `timestamp`, `blob`, `clob`, `object`, and `array`.
+
+      Some column types use a size (like `varchar` and `int`), some have unlimited size (`longvarchar`, `clob`, `blob`).
+
+      Check the (schema reference)[http://propelorm.org/reference/schema.html] for more details on each column type.
+
+      As for the other column attributes, `required`, `primaryKey`, and `autoIncrement`, they mean exactly what their names imply.
+    -->
+    <column name="id"                   type="INTEGER"     required="true"     primaryKey="true" autoIncrement="true"   phpName="Id" />
+    <column name="name"                 type="VARCHAR"     size="50"           required="true"                          phpName="Name" />
+    <column name="needed_class"         type="VARCHAR"     size="50"           required="false"                         phpName="NeededClass" />
+    <column name="archive"              type="VARCHAR"     size="50"           required="false"                         phpName="Archive" />
+    <column name="need_ssl"             type="BOOLEAN"     required="true"     defaultValue="true"                      phpName="NeedSSL" />
+    <column name="need_login"           type="BOOLEAN"     required="true"     defaultValue="true"                      phpName="NeedLogin" />
+    <column name="is_ajax"              type="BOOLEAN"     required="true"     defaultValue="false"                     phpName="IsAJAX" />
+    <column name="menu"                 type="VARCHAR"     size="50"           required="false"                         phpName="Menu" />
+    <column name="base_template"        type="VARCHAR"     size="50"           required="false"                         phpName="BaseTemplate" />
+    <column name="include_page"         type="VARCHAR"     size="50"           required="true"                          phpName="IncludePage" />
+    <column name="error_template"       type="VARCHAR"     size="50"           required="false"                         phpName="ErrorTemplate" />
+    <column name="error"                type="VARCHAR"     size="50"           required="false"                         phpName="Error" />
+    <column name="success_redirect"     type="VARCHAR"     size="50"           required="false"                         phpName="SuccessRedirect" />
+    <column name="permission"           type="VARCHAR"     size="50"           required="true"  defaultValue="ALL"      phpName="Permission" />
+    <unique name="actions_name_un_in">
+      <unique-column name="name"/>
+    </unique>
+
+    <!--
+      A foreign key represents a relationship. Just like a table or a column, a relationship has a `phpName`.
+      By default, Propel uses the `phpName` of the foreign table as the `phpName` of the relation.
+
+      The `refPhpName` defines the name of the relation as seen from the foreign table.
+    -->
+  </table>
+  <table name="amigo" idMethod="native" phpName="Amigo">
+    <column name="id" phpName="Id" type="BIGINT" sqlType="bigint(20) unsigned" autoIncrement="true" required="true" primaryKey="true"/>
+    <column name="nome" phpName="Nome" type="VARCHAR" size="100" required="true"/>
+    <column name="telefone" phpName="Telefone" type="VARCHAR" size="11" required="true"/>
+    <column name="senha" phpName="Senha" type="VARCHAR" size="256" required="true"/>
+    <column name="bloqueado" phpName="bloqueado" type="boolean" />
+    <column name="numero_acesso" phpName="NumeroAcesso" type="BIGINT" />
+    <unique name="id">
+      <unique-column name="id"/>
+    </unique>
+    <vendor type="mysql">
+      <parameter name="Engine" value="InnoDB"/>
+    </vendor>
+  </table>
+  <table name="sorteio" idMethod="native" phpName="Sorteio">
+    <column name="id" phpName="Id" type="BIGINT" sqlType="bigint(20) unsigned" autoIncrement="true" required="true" primaryKey="true"/>
+    <column name="data" phpName="Data" type="TIMESTAMP" required="true" defaultExpr="CURRENT_TIMESTAMP"/>
+    <unique name="id">
+      <unique-column name="id"/>
+    </unique>
+    <vendor type="mysql">
+      <parameter name="Engine" value="InnoDB"/>
+    </vendor>
+  </table>
+  <table name="sorteio_amigo" idMethod="native" phpName="SorteioAmigo">
+    <column name="id" phpName="Id" type="BIGINT" sqlType="bigint(20) unsigned" autoIncrement="true" required="true" primaryKey="true"/>
+    <column name="amigo" phpName="Amigo" type="BIGINT" required="true"/>
+    <column name="amigo_secreto" phpName="AmigoSecreto" type="BIGINT" required="true"/>
+    <column name="sorteio" phpName="Sorteio" type="BIGINT" required="true"/>
+    <unique name="id">
+      <unique-column name="id"/>
+    </unique>
+    <vendor type="mysql">
+      <parameter name="Engine" value="InnoDB"/>
+    </vendor>
+  </table>
+</database>
