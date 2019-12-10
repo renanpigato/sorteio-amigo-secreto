@@ -1,0 +1,49 @@
+<?php
+return array(
+  
+  'app.cache.actions.dir'  =>'cache',
+  'app.cache.actions.name' =>'application_actions.cache.json',
+
+  'app.error.page.default'     => '_ErrorDefault.php',
+  'app.error.template.default' => 'BaseErrorTemplate.php',
+  'app.template.default'       => 'BaseTemplate.php',
+  'app.template.ajax.default'  => 'BaseAJAXTemplate.php',
+  'app.menu.default'           => 'BaseMenu.php',
+  'app.action.default'         => 'RenderView',
+
+  'app.name'              => "name",
+  'app.title'             => "Title",
+  'app.logo'              => "logo.jpg",
+  'app.login.enable'      => true,
+  'app.ssl.enable'        => false,
+  'app.frindlyUrl.enable' => true,
+  'app.dominio'           => "dominio.com.br",
+  'app.path'              => "path",
+  'app.temporary.path'    => "tmp",
+  'app.attach.path'       => "attachs",
+  'app.attach.size'       => 500000,
+
+  'app.db.host' => 'localhost',
+  'app.db.port' => '5432',
+  'app.db.name' => 'name_of_database',
+  'app.db.user' => 'postgres',
+
+  'app.mail.from.name'      => 'Remetente',
+  'app.mail.from.email'     => 'contato@remetente.com.br',
+  'app.mail.replyTo.name'   => 'Contato - Responder para',
+  'app.mail.replyTo.email'  => 'responderpara@remetente.com.br',
+  'app.mail.host'           => 'smtp1.example.com;smtp2.example.com',
+  'app.mail.username'       => 'user@example.com',
+  'app.mail.password'       => 'secret',
+  'app.mail.SMTPsecure'     => 'tls',
+  'app.mail.port'           => 587,
+  'app.mail.send.disabled'  => false,
+  
+  'app.session.name'               => 'projeto',
+  'app.session.rememberMeSeconds'  => 180,
+  'app.session.useCookies'         => true,
+  'app.session.cookieHttponly'     => true,
+  'app.session.cacheExpire'        => 60,
+  'app.session.cookieDomain'       => null,
+  'app.session.cookieLifetime'     => 3600,
+);
