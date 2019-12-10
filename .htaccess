@@ -1,0 +1,23 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine ON
+
+  RewriteCond %{REQUEST_URI} assets
+  RewriteRule (assets.*)$ $1 [L]
+
+  RewriteCond %{REQUEST_URI} .*?html\/.+
+  RewriteRule .*?html\/(.*)$ views/pages/html/$1 [END]
+
+  RewriteCond %{REQUEST_URI} !.*assets.*
+  RewriteCond %{REQUEST_URI} !.*index.*
+  RewriteRule (.*) index.php/$0 [END]
+</IfModule>
+
+<filesMatch "\.(htaccess|htpasswd|ini|sh)$">
+ Order Allow,Deny
+ Deny from all
+</filesMatch>
+
+<filesMatch "\.yml">
+ Order Allow,Deny
+ Deny from all
+</filesMatch>
