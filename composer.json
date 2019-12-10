@@ -1,0 +1,30 @@
+{
+  "name": "rtech/sorteio-amigo-secreto",
+  "description": "Sistema de Sorteio de Amigo Secreto",
+  "authors": [
+    {
+      "name": "Renan Pigato Silva",
+      "email": "renan@renanpigato.inf.com"
+    }
+	],
+  "require": {
+    "propel/propel": "2.0.0-alpha6",
+    "zendframework/zend-session": "^2.7",
+    "monolog/monolog": "1.0"
+  },
+  "require-dev": {
+    "symfony/var-dumper": "^2.8",
+    "jdorn/sql-formatter": "^1.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "AmigoSecreto\\": "model/AmigoSecreto",
+      "Classes\\": "classes",
+      "System\\": "system",
+      "Control\\": "controller",
+      "Actions\\": "controller/actions",
+      "Libs\\": "libs",
+      "Localization\\": "localization"
+    }
+	}
+}
