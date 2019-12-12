@@ -27,6 +27,7 @@ return array(
   'app.db.port' => '5432',
   'app.db.name' => 'name_of_database',
   'app.db.user' => 'postgres',
+  'app.db.pass' => '',
 
   'app.mail.from.name'      => 'Remetente',
   'app.mail.from.email'     => 'contato@remetente.com.br',
