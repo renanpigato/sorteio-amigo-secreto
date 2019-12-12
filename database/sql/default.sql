@@ -40,6 +40,7 @@ CREATE TABLE `sorteio_amigo`
 (
     `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
     `amigo` BIGINT NOT NULL,
+    `amigo_secreto` BIGINT NOT NULL,
     `sorteio` BIGINT NOT NULL,
     UNIQUE INDEX `id` (`id`)
 ) ENGINE=InnoDB;
