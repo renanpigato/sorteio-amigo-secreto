@@ -47,7 +47,7 @@ SET FOREIGN_KEY_CHECKS = 0;
 
 ALTER TABLE `amigo`
 
-  CHANGE `senha` `senha` VARCHAR(256) NOT NULL;
+  CHANGE `palavra_secreta` `senha` VARCHAR(256) NOT NULL;
 
 # This restores the fkey checks, after having unset them earlier
 SET FOREIGN_KEY_CHECKS = 1;
@@ -71,7 +71,7 @@ SET FOREIGN_KEY_CHECKS = 0;
 
 ALTER TABLE `amigo`
 
-  CHANGE `senha` `senha` VARCHAR(256);
+  CHANGE `senha` `palavra_secreta` VARCHAR(256);
 
 # This restores the fkey checks, after having unset them earlier
 SET FOREIGN_KEY_CHECKS = 1;
