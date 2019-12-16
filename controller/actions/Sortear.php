@@ -21,7 +21,7 @@ class Sortear extends BaseAction {
             $amigos        = array();
             $amigosSecreto = array();
 
-            for ($i = 1; $i <= $qtdeAmigos; $i++) {
+            for ($i = 9; $i <= $qtdeAmigos; $i++) {
 
                 $a                = AmigoQuery::create()->findPk($i);
                 $amigos[]         = $a;
@@ -65,10 +65,6 @@ class Sortear extends BaseAction {
 
                         if(!in_array($idSorteado, $amigosSorteados)) {
                             $idSorteado = $idAmigo;
-                        }
-
-                        if($idAmigo == 1) {
-                            $idSorteado = 6;
                         }
 
                     } while ($idAmigo == $idSorteado);
